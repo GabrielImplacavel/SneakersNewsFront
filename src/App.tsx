@@ -11,10 +11,16 @@ function Botao(){
   return <Button variant="outline-dark">Dark</Button>
 }
 
-function Cartao(){
+interface MyProps{
+  image?:string;
+  title?:string;
+};
+
+
+function Cartao({image}:MyProps){
   return (
   <Card style={{ width: '18rem' }}>
-    <Card.Img variant="top" src="https://images.lojanike.com.br/1024x1024/produto/193004_2017424_20200318180045.jpg" />
+    <Card.Img variant="top" src={image}/>
     <Card.Body>
     <Card.Title><strong>Jordan 720 Aerospace</strong></Card.Title>
     <Card.Text>
@@ -35,14 +41,14 @@ function Layout(){
   <Container>
   <Row><Title/></Row>
   <Row>
-  <Col><Cartao /></Col>
-  <Col><Cartao /></Col>
-  <Col><Cartao /></Col>
+  <Col><Cartao image="https://magicfeet.vteximg.com.br/arquivos/ids/177878-500-500/Tenis-Air-Jordan-1-Mid-GS-Infantil-Multicolor.jpg?v=637232446316130000" /></Col>
+  <Col><Cartao image="https://images.lojanike.com.br/1024x1024/produto/261404_2611462_20201007114540.jpg"/></Col>
+  <Col></Col>
   </Row>
   <Row>
-  <Col><Cartao /></Col>
-  <Col><Cartao /></Col>
-  <Col><Cartao /></Col>
+  <Col></Col>
+  <Col></Col>
+  <Col></Col>
   </Row>
   </Container>
   );
